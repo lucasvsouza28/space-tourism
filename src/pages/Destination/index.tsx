@@ -20,7 +20,7 @@ import {
     InfoTitle,
     InfoValue,
 } from './styles';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 type Planet = {
     name: string;
@@ -80,6 +80,7 @@ export const Destination = () => {
                         {
                             planets.map(p => (
                             <TabName
+                                key={p.name + '_tab'}
                                 isSelected={getIsSelected(p)}
                                 onClick={() => setSelected(p)}
                             >{ p.name }</TabName>
@@ -87,7 +88,9 @@ export const Destination = () => {
                     </Tabs>
 
                     { planets.map(p => (
-                        <>
+                        <Fragment
+                            key={p.name + '_content'}
+                        >
                             {
                                 getIsSelected(p) && 
                                 <Content className="fade-in">
@@ -105,7 +108,7 @@ export const Destination = () => {
                                     </InfoContainer>
                                 </Content>
                             }
-                        </>
+                        </Fragment>
                     )) }
                 </TabsContainer>
             </Container>
