@@ -1,4 +1,4 @@
-import { PageType, PageWithBackground } from "../PageWithBackground";
+import { PageWithBackground } from "../PageWithBackground";
 import douglasHurleyImg from '../../assets/crew/douglas-hurley.png';
 import markImg from '../../assets/crew/mark.png';
 import victorImg from '../../assets/crew/victor.png';
@@ -57,7 +57,7 @@ export const Crew = () => {
     const isSelected = (mate: CrewMate) => selected.name === mate.name;
 
     return (
-        <PageWithBackground type={PageType.Crew}>
+        <PageWithBackground type="crew">
             <Container>
 
                 <LeftContainer className="left-container">

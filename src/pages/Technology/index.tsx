@@ -1,5 +1,5 @@
 import { BodyText, Heading3, PageHeader } from "../../common/components/typography";
-import { PageType, PageWithBackground } from "../PageWithBackground";
+import { PageWithBackground } from "../PageWithBackground";
 import slide1Img from '../../assets/technology/slide-1.png';
 import slide2Img from '../../assets/technology/slide-2.png';
 import slide3Img from '../../assets/technology/slide-3.png';
@@ -44,7 +44,7 @@ export const Technology = () => {
     const isSelected = (slide: Slide) => slide.heading === selected.heading;
 
     return (
-        <PageWithBackground type={PageType.Technology}>
+        <PageWithBackground type="technology">
             <Container>
                 <LeftContainer>
                     <PageHeader number="03" text="space launch 101" style={{ justifyContent: 'flex-start' }} />

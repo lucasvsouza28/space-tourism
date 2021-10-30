@@ -1,4 +1,4 @@
-import { PageType, PageWithBackground } from '../PageWithBackground';
+import { PageWithBackground } from '../PageWithBackground';
 import moon from '../../assets/planets/moon.png';
 import mars from '../../assets/planets/mars.png';
 import europa from '../../assets/planets/europa.png';
@@ -6,7 +6,6 @@ import titan from '../../assets/planets/titan.png';
 
 import {
     Container,
-    PageHeaderStyled,
     ImageContainer,
     TabsContainer,
     Tabs,
@@ -67,7 +66,7 @@ export const Destination = () => {
     const getIsSelected = (planet: Planet) => selected.name === planet.name;
 
     return (
-        <PageWithBackground type={PageType.Destination}>
+        <PageWithBackground type="destination">
             <Container>
                 <ImageContainer>
                     <PageHeader number="01" text="pick your destination" style={{ marginBottom: '97px' }} />
