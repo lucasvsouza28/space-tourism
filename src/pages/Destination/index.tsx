@@ -6,7 +6,9 @@ import titan from '../../assets/planets/titan.png';
 
 import {
     Container,
+    PageHeaderStyled,
     ImageContainer,
+    PlanetImage,
     TabsContainer,
     Tabs,
     TabName,
@@ -19,7 +21,6 @@ import {
     InfoValue,
 } from './styles';
 import { useState } from 'react';
-import { PageHeader } from '../../common/components/typography';
 
 type Planet = {
     name: string;
@@ -69,8 +70,8 @@ export const Destination = () => {
         <PageWithBackground type="destination">
             <Container>
                 <ImageContainer>
-                    <PageHeader number="01" text="pick your destination" style={{ marginBottom: '97px' }} />
-                    <img className="animate__animated animate__fadeIn" src={selected.image} />
+                    <PageHeaderStyled number="01" text="pick your destination" />
+                    <PlanetImage className="animate__animated animate__fadeIn" src={selected.image} />
                 </ImageContainer>
                 <TabsContainer>
                     <Tabs>
