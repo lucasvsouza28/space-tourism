@@ -5,6 +5,8 @@ import victorImg from '../../assets/crew/victor.png';
 import anoushehImg from '../../assets/crew/anousheh.png';
 import {
     Container,
+    PageHeaderStyled,
+    BodyTextStyled,
     LeftContainer,
     CrewMateInfoContainer,
     Charge,
@@ -15,7 +17,7 @@ import {
     CrewMateImage,
 } from './styles';
 import { useState } from "react";
-import { BodyText, PageHeader } from "../../common/components/typography";
+import { BodyText } from "../../common/components/typography";
 
 type CrewMate = {
     charge: string;
@@ -62,13 +64,13 @@ export const Crew = () => {
 
                 <LeftContainer className="left-container">
 
-                    <PageHeader number="02" text="Meet your crew" style={{marginBottom: '154px'}} />
+                    <PageHeaderStyled number="02" text="Meet your crew" />
 
                     { selected && (
                         <CrewMateInfoContainer className="animate__animated animate__fadeIn">
                             <Charge>{ selected.charge }</Charge>
-                            <Name style={{marginBottom: '27px'}}>{ selected.name }</Name>
-                            <BodyText color="secondary" style={{marginBottom: '120px'}}>{ selected.description }</BodyText>
+                            <Name>{ selected.name }</Name>
+                            <BodyTextStyled color="secondary">{ selected.description }</BodyTextStyled>
                         </CrewMateInfoContainer>
                     ) }
 

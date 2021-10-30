@@ -6,16 +6,18 @@ import {
 type Props = {
     children: ReactNode;
     style?: CSSProperties;
-    color?: 'primary' | 'secondary'
+    className?: string;
+    color?: 'primary' | 'secondary';
 }
 
 export const BodyText = ({
     children,
     style,
+    className,
     color = 'primary'
 }: Props) => {
     return (
-        <Container style={style} color={color}>
+        <Container className={className} style={style} color={color}>
             { children }            
         </Container>
     )

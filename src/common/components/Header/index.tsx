@@ -5,6 +5,7 @@ import {
     Blur,
     Number,
     Title,
+    BottomBar,
 } from './styles';
 
 export const Header = () => {
@@ -33,6 +34,7 @@ export const Header = () => {
                                     <Title>
                                         { r.title }
                                     </Title>
+                                    <BottomBar />
 
                             </NavLink>
                     )) }

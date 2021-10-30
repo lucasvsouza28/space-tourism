@@ -9,14 +9,16 @@ import {
 type HeadingProps = {
     children: ReactNode;
     style?: CSSProperties;
+    className?: string;
 }
 
 export const Heading1 = ({
     children,
-    style
+    style,
+    className
 }: HeadingProps) => {
     return (
-        <Heading1Container style={style}>
+        <Heading1Container className={className} style={style}>
             {children}
         </Heading1Container>        
     );
@@ -24,10 +26,11 @@ export const Heading1 = ({
 
 export const Heading2 = ({
     children,
-    style
+    style,
+    className,
 }: HeadingProps) => {
     return (
-        <Heading2Container style={style}>
+        <Heading2Container className={className} style={style}>
             {children}
         </Heading2Container>        
     );
@@ -35,20 +38,22 @@ export const Heading2 = ({
 
 export const Heading3 = ({
     children,
-    style
+    style,
+    className,
 }: HeadingProps) => {
     return (
-        <Heading3Container style={style}>
+        <Heading3Container className={className} style={style}>
             {children}
         </Heading3Container>
     );
 }
 export const Heading4 = ({
     children,
-    style
+    style,
+    className,
 }: HeadingProps) => {
     return (
-        <Heading4Container style={style}>
+        <Heading4Container className={className} style={style}>
             {children}
         </Heading4Container>        
     );
