@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { PageHeader } from '../../common/components/typography';
 
 export const Container = styled.div`
     display: flex;
@@ -12,27 +13,6 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-transform: uppercase;
-    font-family: Barlow Condensed;
-    font-size: 28px;
-    line-height: 34px;
-    letter-spacing: 4.725px;
-`;
-
-export const ImageContainerTitle = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 97px;
-`;
-
-export const ImageContainerNumber = styled.div`
-    margin-right: 28px;
-    font-weight: bold;
-    mix-blend-mode: normal;
-    opacity: 0.25;
 `;
 
 export const TabsContainer = styled.div`

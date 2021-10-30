@@ -6,17 +6,16 @@ import anoushehImg from '../../assets/crew/anousheh.png';
 import {
     Container,
     LeftContainer,
-    Title,
     CrewMateInfoContainer,
     Charge,
     Name,
-    Description,
     Slider,
     SliderItem,
     RightContainer,
     CrewMateImage,
 } from './styles';
 import { useState } from "react";
+import { BodyText, PageHeader } from "../../common/components/typography";
 
 type CrewMate = {
     charge: string;
@@ -55,32 +54,38 @@ export const Crew = () => {
 
     const [selected, setSelected] = useState<CrewMate>(crewMates[0]);
 
+    const isSelected = (mate: CrewMate) => selected.name === mate.name;
+
     return (
         <PageWithBackground type={PageType.Crew}>
             <Container>
 
-                <LeftContainer>
+                <LeftContainer className="left-container">
 
-                    <Title></Title>
+                    <PageHeader number="02" text="Meet your crew" style={{marginBottom: '154px'}} />
 
-                    { crewMates.map(c => (
-                        <CrewMateInfoContainer
-                            key={c.name}
-                        >
-                            <Charge>{ c.charge }</Charge>
-                            <Name>{ c.name }</Name>
-                            <Description>{ c.description }</Description>
+                    { selected && (
+                        <CrewMateInfoContainer className="animate__animated animate__fadeIn">
+                            <Charge>{ selected.charge }</Charge>
+                            <Name style={{marginBottom: '27px'}}>{ selected.name }</Name>
+                            <BodyText color="secondary" style={{marginBottom: '120px'}}>{ selected.description }</BodyText>
                         </CrewMateInfoContainer>
-                    )) }
+                    ) }
 
                     <Slider>
-                        <SliderItem />
+                        { crewMates.map(c => (
+                            <SliderItem
+                                key={c.name}
+                                active={isSelected(c)}
+                                onClick={() => setSelected(c)}
+                            />
+                        )) }
                     </Slider>
 
                 </LeftContainer>
 
-                <RightContainer>
-                    { selected && <CrewMateImage src={selected.image} alt={selected.name} /> }
+                <RightContainer className="animate__animated animate__fadeIn">
+                    { selected && <CrewMateImage src={selected.image} alt={selected.name} style={{ height: '85%' }} /> }
                 </RightContainer>
 
             </Container>

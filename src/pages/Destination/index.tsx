@@ -6,9 +6,8 @@ import titan from '../../assets/planets/titan.png';
 
 import {
     Container,
+    PageHeaderStyled,
     ImageContainer,
-    ImageContainerTitle,
-    ImageContainerNumber,
     TabsContainer,
     Tabs,
     TabName,
@@ -20,7 +19,8 @@ import {
     InfoTitle,
     InfoValue,
 } from './styles';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
+import { PageHeader } from '../../common/components/typography';
 
 type Planet = {
     name: string;
@@ -70,10 +70,8 @@ export const Destination = () => {
         <PageWithBackground type={PageType.Destination}>
             <Container>
                 <ImageContainer>
-                    <ImageContainerTitle>
-                        <ImageContainerNumber>01</ImageContainerNumber> pick your destination
-                    </ImageContainerTitle>
-                    <img className="fade-in" src={selected.image} />
+                    <PageHeader number="01" text="pick your destination" style={{ marginBottom: '97px' }} />
+                    <img className="animate__animated animate__fadeIn" src={selected.image} />
                 </ImageContainer>
                 <TabsContainer>
                     <Tabs>
@@ -87,29 +85,23 @@ export const Destination = () => {
                         ))}
                     </Tabs>
 
-                    { planets.map(p => (
-                        <Fragment
-                            key={p.name + '_content'}
-                        >
-                            {
-                                getIsSelected(p) && 
-                                <Content className="fade-in">
-                                    <Name>{ p.name }</Name>
-                                    <Description>{ p.description }</Description>
-                                    <InfoContainer>
-                                        <Info>
-                                            <InfoTitle>avg. distance</InfoTitle>
-                                            <InfoValue>{ p.avgDistance }</InfoValue>
-                                        </Info>
-                                        <Info>
-                                            <InfoTitle>est. travel time</InfoTitle>
-                                            <InfoValue>{ p.travelTime }</InfoValue>
-                                        </Info>
-                                    </InfoContainer>
-                                </Content>
-                            }
-                        </Fragment>
-                    )) }
+                    {
+                        selected &&
+                        <Content className="animate__animated animate__fadeIn">
+                            <Name>{ selected.name }</Name>
+                            <Description>{ selected.description }</Description>
+                            <InfoContainer>
+                                <Info>
+                                    <InfoTitle>avg. distance</InfoTitle>
+                                    <InfoValue>{ selected.avgDistance }</InfoValue>
+                                </Info>
+                                <Info>
+                                    <InfoTitle>est. travel time</InfoTitle>
+                                    <InfoValue>{ selected.travelTime }</InfoValue>
+                                </Info>
+                            </InfoContainer>
+                        </Content>
+                    }
                 </TabsContainer>
             </Container>
         </PageWithBackground>

@@ -24,7 +24,7 @@ export const Routes = () => {
                             exact={r.exact}
                             
                         >
-                            <div className="fade-in">
+                            <div className="animate__animated animate__fadeIn">
                                 { r.component() }
                             </div>
                         </Route>
