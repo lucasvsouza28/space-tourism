@@ -4,6 +4,11 @@ export const Container = styled.div`
     width: 70%;
     margin: 15% auto 0 auto;
     display: flex;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+
 `;
 
 export const ElementsContainer = styled.div`
@@ -11,6 +16,11 @@ export const ElementsContainer = styled.div`
     flex: 1;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -29,6 +39,10 @@ export const Headline = styled.div`
     color: ${ props => props.theme.color.secondary };
 
     margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 export const Highlight = styled.div`
@@ -45,6 +59,10 @@ export const Description = styled.div`
     line-height: 32px;
 
     color: ${ props => props.theme.color.secondary };
+
+    @media (max-width: 768px) {
+        margin-bottom: 156px;
+    }
 `;
 
 export const RoundButton = styled.button`
@@ -63,5 +81,11 @@ export const RoundButton = styled.button`
 
     &:hover {
         outline: 88px solid #979797;
+    }
+
+    @media (max-width: 768px) {
+        width: 242px;
+        height: 242px;
+        align-self: center;
     }
 `;

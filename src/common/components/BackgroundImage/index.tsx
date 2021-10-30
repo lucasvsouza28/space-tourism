@@ -10,13 +10,21 @@ export const BackgroundImage = ({
     image
 }: Props) => {
     return (
-        <img className="animate__animated animate__fadeIn" src={image || bgHome} style={{
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            zIndex: -1
-        }} />
+        <div
+            className="bg animate__animated animate__fadeIn"
+            style={{
+                backgroundImage: `url('${ image || bgHome }')`,
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                width: '150%',
+                height: '150%',
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                zIndex: -1
+            }}
+        >
+        </div>
     )
 }
