@@ -4,26 +4,68 @@ import { PageHeader } from '../../common/components/typography';
 export const Container = styled.div`
     display: flex;
     flex: 1;
-    width: 70%;
-    margin: 5% auto 0 auto;
-    justify-content: space-between;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    flex-direction: column;
+    
+    @media(min-width: 1024px) {
+        justify-content: space-between;
+        margin: 5% auto 0 auto;
+        padding: 0;
+        flex-direction: row;
+
+        width: 70%;
+    }
+`;
+
+export const PageHeaderStyled = styled(PageHeader)`
+    margin-bottom: 60px;
+
+    @media(min-width: 769px){
+        margin-bottom: 97px;
+    }
 `;
 
 export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    
+    @media(min-width: 1024px) {
+        align-items: initial;
+    }
+`;
+
+export const PlanetImage = styled.img`
+    height: 300px;
+    width: 300px;
+    margin-bottom: 53px;
+
+    @media(min-width: 1024px) {
+        height: auto;
+        width: auto;
+        margin-bottom: 0;
+    }
+
 `;
 
 export const TabsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40%;
+    justify-content: center;
+    
+    @media(min-width: 1024px) {
+        width: 40%;
+        justify-content: initial;
+    }
 `;
 
 export const Tabs = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     text-transform: uppercase;
     font-family: Barlow Condensed;
@@ -32,6 +74,10 @@ export const Tabs = styled.div`
     letter-spacing: 2.7px;
 
     gap: 4rem;
+
+    @media(min-width: 1024px) {
+        justify-content: initial;
+    }
 
 `;
 
@@ -51,7 +97,13 @@ export const TabName = styled.div<TabProps>`
     }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+    padding: 0 50px;
+
+    @media (min-width: 1024px) {
+        padding: 0;
+    }    
+`;
 
 export const Name = styled.div`
     font-family: Bellefair;
@@ -59,6 +111,11 @@ export const Name = styled.div`
     line-height: 115px;
     text-transform: uppercase;
     margin-bottom: 14px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+        text-align: initial;
+    }
 `;
 
 export const Description = styled.div`
@@ -67,6 +124,11 @@ export const Description = styled.div`
     line-height: 32px;
     color: ${ props => props.theme.color.secondary };
     margin-bottom: 54px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+        text-align: initial;
+    }
 `;
 
 export const InfoContainer = styled.div`
@@ -74,6 +136,12 @@ export const InfoContainer = styled.div`
     padding-top: 27px;
     display: flex;
     gap: 100px;
+
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+        justify-content: initial;
+    }
 `;
 
 export const Info = styled.div`

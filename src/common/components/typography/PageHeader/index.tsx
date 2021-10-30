@@ -9,15 +9,17 @@ type Props = {
     number: string;
     text: string;
     style?: CSSProperties;
+    className?: string;
 }
 
 export const PageHeader = ({
     number,
     text,
-    style
+    style,
+    className
 }: Props) => {
     return (
-        <Container style={style}>
+        <Container className={className} style={style}>
             <Number>{ number }</Number>
             <Text>{ text }</Text>
         </Container>
