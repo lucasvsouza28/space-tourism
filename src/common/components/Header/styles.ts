@@ -9,7 +9,6 @@ export const Container = styled.div`
 `;
 
 export const HeaderNav = styled.nav`
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -18,26 +17,33 @@ export const HeaderNav = styled.nav`
     position: relative;
     
     margin-top: 40px;
-    gap: 2rem;
-    
+    gap: 37px;
+    padding: 38px 46px;
+
     a {
         font-family: 'Barlow Condensed', serif;
         text-decoration: none;
         color: #FFF;
         z-index: 2;
+        position: relative;
 
         display: flex;
-        height: 100%;
+        height: 73px;
         align-items: center;
         
-        &.active {
-            border-bottom: 2px solid #FFF;
+        &.active span{
+            display: block;
         }
 
-        &:hover {
-            border-bottom: 2px solid #FFF;
-            border-bottom-color: rgba(255, 255, 255, 50%);
+        &:hover span {
+            display: block;
+            opacity: 0.5;
         }
+    }
+
+    @media (min-width: 1024px) {
+        gap: 82px;
+        padding: 38px 120px;
     }
 `;
 
@@ -55,6 +61,11 @@ export const Number = styled.div`
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;            
+    }
 `;
 
 export const Title = styled.div`
@@ -63,4 +74,13 @@ export const Title = styled.div`
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
+`;
+
+export const BottomBar = styled.span`
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0;
 `;
