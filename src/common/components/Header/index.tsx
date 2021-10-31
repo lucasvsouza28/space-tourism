@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
     Container,
@@ -13,7 +14,6 @@ import {
 
 import CloseSvg from '../../../assets/icons/close.svg';
 import HambuguerSvg from '../../../assets/icons/hamburguer.svg';
-import { useRef, useState } from 'react';
 
 export const Header = () => {            
     const [menuOpened, setMenuOpened] = useState<boolean>(false);
