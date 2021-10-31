@@ -1,4 +1,4 @@
-import { PageWithBackground } from '../PageWithBackground';
+import { PageWithBackground } from '../../common/components/PageWithBackground';
 import moon from '../../assets/planets/moon.png';
 import mars from '../../assets/planets/mars.png';
 import europa from '../../assets/planets/europa.png';
