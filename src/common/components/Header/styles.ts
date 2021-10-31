@@ -62,8 +62,10 @@ type BlurProps = {
 
 export const Blur = styled.div<BlurProps>`
     position: absolute;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(10.5485px);
+    
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4);
+
     height: 101vh;
     width: 254px;
     z-index: 1;
