@@ -1,4 +1,4 @@
-import { PageWithBackground } from "../PageWithBackground";
+import { PageWithBackground } from "../../common/components/PageWithBackground";
 import douglasHurleyImg from '../../assets/crew/douglas-hurley.png';
 import markImg from '../../assets/crew/mark.png';
 import victorImg from '../../assets/crew/victor.png';

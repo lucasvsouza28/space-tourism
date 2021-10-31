@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router';
-import { PageWithBackground } from '../PageWithBackground';
+import { PageWithBackground } from '../../common/components/PageWithBackground';
 import {
     Container,
     ElementsContainer,

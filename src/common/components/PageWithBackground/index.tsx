@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { BackgroundImage } from "../../common/components/BackgroundImage";
-import bgDestination from '../../assets/bg-destination.jpg';
-import bgCrew from '../../assets/bg-crew.png';
-import bgTechnology from '../../assets/bg-technology.png';
+import { BackgroundImage } from "../BackgroundImage";
+import bgDestination from '../../../assets/bg-destination.jpg';
+import bgCrew from '../../../assets/bg-crew.png';
+import bgTechnology from '../../../assets/bg-technology.png';
 
 type Props = {
     type?: "home" | "destination" | "crew" | "technology";
