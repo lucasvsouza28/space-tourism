@@ -19,7 +19,7 @@ export const Header = () => {
     const [menuOpened, setMenuOpened] = useState<boolean>(false);
     const history = useHistory();
     
-    const handleNavigate = (e, path) => {
+    const handleNavigate = (e: any, path: string) => {
         e.preventDefault();
         setMenuOpened(false);
         history.push(path);
