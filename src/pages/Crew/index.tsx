@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { PageWithBackground } from "../../common/components/PageWithBackground";
+
 import douglasHurleyImg from '../../assets/crew/douglas-hurley.png';
 import markImg from '../../assets/crew/mark.png';
 import victorImg from '../../assets/crew/victor.png';
 import anoushehImg from '../../assets/crew/anousheh.png';
+
 import {
     Container,
     PageHeaderStyled,
@@ -16,8 +19,6 @@ import {
     RightContainer,
     CrewMateImage,
 } from './styles';
-import { useState } from "react";
-import { BodyText } from "../../common/components/typography";
 
 type CrewMate = {
     charge: string;

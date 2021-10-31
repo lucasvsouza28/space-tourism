@@ -17,9 +17,9 @@ export const PageWithBackground = ({
     const getImage = () => {
         const images = {
             "home": <BackgroundImage />,
-            "destination": <BackgroundImage image={bgDestination} />,
-            "crew": <BackgroundImage image={bgCrew} />,
-            "technology": <BackgroundImage image={bgTechnology} />,
+            "destination": <BackgroundImage image={bgDestination} imageMobile={bgDestination} />,
+            "crew": <BackgroundImage image={bgCrew} imageMobile={bgCrew} />,
+            "technology": <BackgroundImage image={bgTechnology} imageMobile={bgTechnology} />,
         }
 
         if (type in images) return images[type];
