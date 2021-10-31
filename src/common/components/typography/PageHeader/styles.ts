@@ -9,9 +9,23 @@ export const Container = styled.div`
 
     text-transform: uppercase;
     font-family: Barlow Condensed;
-    font-size: 28px;
-    line-height: 34px;
     letter-spacing: 4.725px;
+
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 32px;
+
+    @media(min-width: 768px){
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 60px;
+    }
+
+    @media(min-width: 1024px){
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 97px;
+    }
 `;
 
 export const Number = styled.div`

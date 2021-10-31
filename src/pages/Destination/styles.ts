@@ -24,26 +24,6 @@ export const Container = styled.div`
 `;
 
 export const PageHeaderStyled = styled(PageHeader)`
-
-    font-size: 16px;
-    line-height: 19px;
-
-    margin-bottom: 32px;
-    
-    @media(min-width: 768px){
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 60px;
-    }
-
-    @media(min-width: 769px){
-        margin-bottom: 97px;
-    }
-
-    @media(min-width: 1024px){
-        font-size: 28px;
-        line-height: 34px;
-    }
 `;
 
 export const ImageContainer = styled.div`

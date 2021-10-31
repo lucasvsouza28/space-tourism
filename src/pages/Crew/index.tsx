@@ -18,6 +18,8 @@ import {
     SliderItem,
     RightContainer,
     CrewMateImage,
+    MobileContainer,
+    CrewMateImageContainer,
 } from './styles';
 
 type CrewMate = {
@@ -64,7 +66,6 @@ export const Crew = () => {
             <Container>
 
                 <LeftContainer className="left-container">
-
                     <PageHeaderStyled number="02" text="Meet your crew" />
 
                     { selected && (
@@ -90,6 +91,35 @@ export const Crew = () => {
                 <RightContainer className="animate__animated animate__fadeIn">
                     { selected && <CrewMateImage src={selected.image} alt={selected.name} style={{ height: '85%' }} /> }
                 </RightContainer>
+
+                <MobileContainer>
+                    <PageHeaderStyled number="02" text="Meet your crew" />
+
+                    { selected &&
+                        <CrewMateImageContainer>
+                            <CrewMateImage src={selected.image} alt={selected.name} />
+                        </CrewMateImageContainer>
+                    }
+
+                    <Slider>
+                        { crewMates.map(c => (
+                            <SliderItem
+                                key={c.name}
+                                active={isSelected(c)}
+                                onClick={() => setSelected(c)}
+                            />
+                        )) }
+                    </Slider>
+
+                    { selected && (
+                        <CrewMateInfoContainer className="animate__animated animate__fadeIn">
+                            <Charge>{ selected.charge }</Charge>
+                            <Name>{ selected.name }</Name>
+                            <BodyTextStyled color="secondary">{ selected.description }</BodyTextStyled>
+                        </CrewMateInfoContainer>
+                    ) }
+
+                </MobileContainer>
 
             </Container>
         </PageWithBackground>
