@@ -134,6 +134,10 @@ export const HeaderNavMobile = styled.div`
         }
     }
 
+    svg:active {
+        transform: scale(0.9);
+    }
+
 
     @media(min-width: 767px) {
         display: none;

@@ -13,16 +13,29 @@ import {
 
 import CloseSvg from '../../../assets/icons/close.svg';
 import HambuguerSvg from '../../../assets/icons/hamburguer.svg';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export const Header = () => {            
     const [menuOpened, setMenuOpened] = useState<boolean>(false);
     const history = useHistory();
+    const menuBlurRef = useRef<HTMLDivElement>(null);
     
     const handleNavigate = (e: any, path: string) => {
         e.preventDefault();
         setMenuOpened(false);
+
         history.push(path);
+    }
+
+    const handleMenuClose = () => {
+        
+        if(menuBlurRef?.current) {
+            menuBlurRef?.current.classList.add('animate__fadeOutRight');
+        }
+
+        setTimeout(() => {
+            setMenuOpened(false);
+        }, 800);
     }
 
     const routes = [
@@ -65,10 +78,11 @@ export const Header = () => {
                 </div>
 
                 <Blur
+                    ref={menuBlurRef}
                     active={menuOpened}
-                    className="animate__animated animate__fadeIn animate__faster">
+                    className="animate__animated animate__fadeInRight animate__faster">
                     <CloseButtonContainer>
-                        <div onClick={() => setMenuOpened(false)}>
+                        <div onClick={handleMenuClose}>
                             <CloseSvg />
                         </div>
                     </CloseButtonContainer>
