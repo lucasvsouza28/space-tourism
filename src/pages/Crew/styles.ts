@@ -11,7 +11,11 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
 
-    padding: 0 155px;
+    padding: 0 24px;
+    
+    @media(min-width: 768px) {
+        padding: 0 155px;        
+    }
     
     @media(min-width: 1024px) {
         margin-bottom: 154px;
@@ -23,15 +27,16 @@ export const Container = styled.div`
 `;
 
 export const PageHeaderStyled = styled(PageHeader)`
-    margin-bottom: 60px;
-
-    @media(min-width: 1024px) {
-        margin-bottom: 154px;
-    }
 `;
 
 export const LeftContainer = styled.div`    
     position: relative;
+    
+    display: none;
+
+    @media(min-width: 768px) {
+        display: block;
+    }
     
     @media(min-width: 1024px) {
         margin-right: 144px;
@@ -50,18 +55,21 @@ export const Charge = styled.div`
     font-family: Bellefair;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 37px;    
-    text-transform: uppercase;
-    
-    mix-blend-mode: normal;
-
+    text-transform: uppercase;    
+    mix-blend-mode: normal;    
     opacity: 0.5;
     
+    font-size: 16px;
+    line-height: 18px;
+    
     margin-bottom: 8px;
-
     text-align: center;
 
+    @media(min-width: 768px){
+        font-size: 32px;
+        line-height: 37px;
+    }
+    
     @media(min-width: 1024px){
         text-align: initial;
         margin-bottom: 15px;
@@ -70,9 +78,15 @@ export const Charge = styled.div`
 
 export const Name = styled(Heading3)`
     text-align: center;
-    font-size: 40px;
-    line-height: 46px;
+
+    font-size: 24px;
+    line-height: 28px;
     margin-bottom: 16px;
+    
+    @media(min-width: 768px){
+        font-size: 40px;
+        line-height: 46px;
+    }
 
     @media(min-width: 1024px){
         text-align: initial;
@@ -86,7 +100,17 @@ export const BodyTextStyled = styled(BodyText)`
     text-align: center;
     margin-bottom: 40px;
 
+    font-size: 15px;
+    line-height: 25px;
+
+    @media(min-width: 768px){
+        font-size: 16px;
+        line-height: 28px;
+    }
+
     @media(min-width: 1024px){
+        font-size: 18px;
+        line-height: 32px;
         text-align: initial;
         margin-bottom: 120px;
     }
@@ -97,8 +121,13 @@ export const Slider = styled.div`
     flex-direction: row;
     gap: 24px;
     justify-content: center;
-    margin-bottom: 40px;
     
+    margin-bottom: 32px;
+
+    @media(min-width: 1024px){
+        margin-bottom: 40px;
+    }
+
     @media(min-width: 1024px){
         justify-content: initial;
         position: absolute;
@@ -126,8 +155,37 @@ export const SliderItem = styled.div<SliderItemProps>`
 `;
 
 export const RightContainer = styled.div`
-    display: flex;
+    display: none;
+
+    @media(min-width: 768px) {
+        display: flex;
+    }
 `;
 
 export const CrewMateImage = styled.img`
+    height: 222px;
+
+    @media(min-width: 768px) {
+        width: auto;
+        height: auto;
+        margin: initial initial 40px initial;
+    }
+`;
+
+export const MobileContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media(min-width: 768px) {
+        display: none;
+    }
+`;
+
+export const CrewMateImageContainer= styled.div`
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #383B4B;
+    margin-bottom: 32px;
+    justify-content: center;
 `;
