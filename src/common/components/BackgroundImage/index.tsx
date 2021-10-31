@@ -1,30 +1,24 @@
-import { useState } from 'react';
-import './styles.css';
 import bgHome from '../../../assets/bg-home.jpg';
+import bgHomeMobile from '../../../assets/bg-home-mobile.png';
+import {
+    Container,
+} from './styles';
 
 type Props = {
     image?: string;
+    imageMobile?: string;
 }
 
 export const BackgroundImage = ({
-    image
+    image,
+    imageMobile
 }: Props) => {
     return (
-        <div
-            className="bg animate__animated animate__fadeIn"
-            style={{
-                backgroundImage: `url('${ image || bgHome }')`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                width: '150%',
-                height: '150%',
-                position: 'absolute',
-                top: '0',
-                left: '0',
-                zIndex: -1
-            }}
+        <Container
+            className="animate__animated animate__fadeIn"
+            image={image || bgHome}
+            imageMobile={imageMobile || bgHomeMobile}
         >
-        </div>
+        </Container>
     )
 }
