@@ -7,13 +7,13 @@ import {
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 40px auto 0 auto;
     width: 100%;
     height: 100vh;
-
+    
     padding: 0 24px;
     
     @media(min-width: 768px) {
+        margin: 40px auto 0 auto;
         padding: 0 155px;        
     }
     
