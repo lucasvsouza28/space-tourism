@@ -64,7 +64,7 @@ export const Blur = styled.div<BlurProps>`
     position: absolute;
     
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
 
     height: 101vh;
     width: 254px;
