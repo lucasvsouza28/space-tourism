@@ -84,6 +84,7 @@ export const Description = styled.p`
     @media (min-width: 1024px) {
         font-size: 18px;
         line-height: 32px;
+        margin-bottom: initial;
     }
 `;
 
@@ -113,5 +114,6 @@ export const RoundButton = styled.button`
     @media (min-width: 1024px) {
         width: 274px;
         height: 274px;
+        align-self: flex-end;
     }
 `;
